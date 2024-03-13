@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="asset/favicon/icons8-calculadora-de-manzana-32.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="calculadora__contenedor-pantalla">
+        <input class="pantalla" type="text" id="pantalla" readonly />
+      </div>
+
+      <div class="calculadora__contenedor-botones">
+
+        <div class="botones">
+            <input class="btn btn-gris" type="button" value="AC" onclick="borradoCompleto()"/>
+            
+            <input class="btn btn-invisible" type="button" value=""/>
+            <input class="btn btn-gris" type="button" value="C" onclick="borrar()"/>
+            <input class="btn btn-naranja" type="button" value="÷" onclick="operaciones(this.value)"/>
+        </div>
+        
+        <div class="botones">
+            <input class="btn" type="button" value="7" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="8" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="9" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn btn-naranja" type="button" value="x" onclick="operaciones(this.value)"/>
+        </div>
+
+        <div class="botones">
+            <input class="btn" type="button" value="4" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="5" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="6" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn btn-naranja" type="button" value="-" onclick="operaciones(this.value)"/>
+        </div>
+
+        <div class="botones">
+            <input class="btn" type="button" value="1" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="2" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn" type="button" value="3" onclick="agregarEnPantalla(this.value)"/>
+            <input class="btn btn-naranja" type="button" value="+" onclick="operaciones(this.value)"/>
+        </div>
+
+        <div class="botones">
+          <input class="btn btn-doble" type="button" value="0" onclick="agregarEnPantalla(this.value)"/>
+          <input class="btn" type="button" value="." onclick="decimal()"  />
+          <input class="btn btn-naranja" type="button" value="=" onclick="resultado()"/>
+        </div>
+        
+      </div> 
+    </div>
+    <footer class="footer">
+        <p class="footer__texto">
+            Diseñado por <b class="negrita__naranja">Guido Saez</b>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
